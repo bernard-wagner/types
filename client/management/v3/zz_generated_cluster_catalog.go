@@ -14,6 +14,7 @@ const (
 	ClusterCatalogFieldCreated              = "created"
 	ClusterCatalogFieldCreatorID            = "creatorId"
 	ClusterCatalogFieldDescription          = "description"
+	ClusterCatalogFieldKeyRing              = "keyring"
 	ClusterCatalogFieldKind                 = "kind"
 	ClusterCatalogFieldLabels               = "labels"
 	ClusterCatalogFieldLastRefreshTimestamp = "lastRefreshTimestamp"
@@ -28,6 +29,7 @@ const (
 	ClusterCatalogFieldURL                  = "url"
 	ClusterCatalogFieldUUID                 = "uuid"
 	ClusterCatalogFieldUsername             = "username"
+	ClusterCatalogFieldVerify               = "verify"
 )
 
 type ClusterCatalog struct {
@@ -40,6 +42,7 @@ type ClusterCatalog struct {
 	Created              string             `json:"created,omitempty" yaml:"created,omitempty"`
 	CreatorID            string             `json:"creatorId,omitempty" yaml:"creatorId,omitempty"`
 	Description          string             `json:"description,omitempty" yaml:"description,omitempty"`
+	KeyRing              string             `json:"keyring,omitempty" yaml:"keyring,omitempty"`
 	Kind                 string             `json:"kind,omitempty" yaml:"kind,omitempty"`
 	Labels               map[string]string  `json:"labels,omitempty" yaml:"labels,omitempty"`
 	LastRefreshTimestamp string             `json:"lastRefreshTimestamp,omitempty" yaml:"lastRefreshTimestamp,omitempty"`
@@ -54,6 +57,7 @@ type ClusterCatalog struct {
 	URL                  string             `json:"url,omitempty" yaml:"url,omitempty"`
 	UUID                 string             `json:"uuid,omitempty" yaml:"uuid,omitempty"`
 	Username             string             `json:"username,omitempty" yaml:"username,omitempty"`
+	Verify               bool               `json:"verify,omitempty" yaml:"verify,omitempty"`
 }
 
 type ClusterCatalogCollection struct {
