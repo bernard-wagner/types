@@ -4,7 +4,7 @@ import (
 	"github.com/rancher/norman/condition"
 	"github.com/rancher/norman/types"
 
-	"k8s.io/api/core/v1"
+	v1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 )
 
@@ -26,6 +26,8 @@ type CatalogSpec struct {
 	CatalogKind string `json:"catalogKind,omitempty"`
 	Username    string `json:"username,omitempty"`
 	Password    string `json:"password,omitempty" norman:"type=password"`
+	Verify      bool   `json:"verify,omitempty"`
+	KeyRing     string `json:"keyring,omitempty"`
 }
 
 type CatalogStatus struct {
